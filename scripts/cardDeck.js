@@ -31,12 +31,9 @@ const cardDeck = {
 		return draw;
 	},
 	drawCards(num) {
-		const { deck, drawnCards } = this;
 		const thisDraw = [];
 		for (let i = 0; i < num; i++) {
-			const draw = deck.pop();
-			thisDraw.push(draw);
-			drawnCards.push(draw);
+			thisDraw.push(this.drawCard());
 		}
 		return thisDraw;
 	}
