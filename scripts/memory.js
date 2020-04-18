@@ -147,11 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	];
 
-	//creating our grid/gameboard
+	//variables
 	const grid = document.querySelector('.grid');
-	const cardsChosen = [];
-	const cardsChosenId = [];
+	const resultDisplay = document.querySelector('#results');
+	let cardsChosen = [];
+	let cardsChosenId = [];
+	let cardsMatched = [];
 
+	//creating our grid/gameboard
 	function createBoard() {
 		for (let i = 0; i < cards.length; i++) {
 			const card = document.createElement('img');
@@ -163,13 +166,49 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	//check for matches
+	function checkForMatch() {
+		const twoCards = document.querySelectorAll('img');
+		const optionOneId = cardsChosenId[0];
+		const optionTwoId = cardsChosenId[1];
+
+		if (cardsChosen[0] === cardsChosen[1]) {
+			alert('You found a match!');
+			twoCards[optionOneId].setAttribute('src', 'img/memory/white.jpg');
+			twoCards[optionTwoId].setAttribute('src', 'img/memory/white.jpg');
+			cardsMatched.push(cardsChosen);
+		} else {
+			twoCards[optionOneId].setAttribute('src', 'img/memory/blank.jpg');
+			twoCards[optionTwoId].setAttribute('src', 'img/memory/blank.jpg');
+			alert('Sorry, no match!');
+		}
+		cardsChosen = [];
+		cardsChosenId = [];
+		resultDisplay.textContent = cardsMatched.length;
+
+		if (cardsMatched.length === cards.length / 2) {
+			resultDisplay.textContent = 'Congatulations, you won!';
+		}
+	}
 
 	//flip your card
 	function flipCard() {
 		const cardId = this.getAttribute('data-id');
-		cardsChosen.push(cards[cardId.name]);
+
+		//ADD CHECK TO SEE IF ALREADY MATCHED
+
+		// if (cardsChosenId.length === 1 && cardsChosenId[0] == cardId) {
+		// 	return;
+		// }
+		// if (this.src.search('white.png') != -1) {
+		// 	return;
+		// }
+		cardsChosen.push(cards[cardId].name);
 		cardsChosenId.push(cardId);
 		this.setAttribute('src', cards[cardId].img);
+
+		if (cardsChosen.length === 2) {
+			setTimeout(checkForMatch, 200);
+		}
 	}
 
 	createBoard();
