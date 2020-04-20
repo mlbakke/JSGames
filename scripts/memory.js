@@ -156,6 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//creating our grid/gameboard
 	function createBoard() {
+		//shuffle cards
+		for (let i = cards.length - 1; i > 0; i--) {
+			// const j: 0 <= j <= i
+			const j = Math.floor(Math.random() * (i + 1));
+			//swap card [i] and [j]
+			[ cards[i], cards[j] ] = [ cards[j], cards[i] ];
+		}
+
 		for (let i = 0; i < cards.length; i++) {
 			const card = document.createElement('img');
 			card.setAttribute('src', 'img/memory/blank.jpg');
