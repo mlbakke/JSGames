@@ -194,14 +194,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	function flipCard() {
 		const cardId = this.getAttribute('data-id');
 
-		//ADD CHECK TO SEE IF ALREADY MATCHED
+		//Checks if card is already facing up
+		if (cardsChosenId.length === 1 && cardsChosenId[0] == cardId) {
+			return;
+		}
+		//Checks if card is already matched
+		if (this.src.search('white.jpg') !== -1) {
+			return;
+		}
 
-		// if (cardsChosenId.length === 1 && cardsChosenId[0] == cardId) {
-		// 	return;
-		// }
-		// if (this.src.search('white.png') != -1) {
-		// 	return;
-		// }
 		cardsChosen.push(cards[cardId].name);
 		cardsChosenId.push(cardId);
 		this.setAttribute('src', cards[cardId].img);
