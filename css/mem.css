@@ -8,3 +8,11 @@
 img {
 	width: 100px;
 }
+
+#newGame {
+	border: 1px solid rgba(0, 0, 0, .4);
+	display: inline-block;
+	border-radius: 2px;
+	padding: .4rem 1rem;
+	cursor: pointer;
+}
