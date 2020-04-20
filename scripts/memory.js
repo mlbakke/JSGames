@@ -158,8 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//creating our grid/gameboard
 	function createBoard() {
-		//set score to zero
+		//reset previous game
 		resultDisplay.textContent = 0;
+		cardsChosen = [];
+		cardsChosenId = [];
+		cardsMatched = [];
 		//check if game is in progress
 		var element = document.getElementsByClassName('card');
 		if (element[0]) {
