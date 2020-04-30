@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* forces inheritance for box-sizing in body */
+  box-sizing: inherit; }
+
+html {
+  /* 1rem = 10px on most default browser settings */
+  font-size: 62.5%; }
+
+body {
+  /* box-sizing will be inherited to the whole site */
+  box-sizing: border-box;
+  padding: 3rem; }
+
+.heading-primary {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #293132;
+  line-height: 1rem; }
+
+body {
+  background-color: #eef0f2; }
+
+.header {
+  border-bottom: 2px solid rgba(241, 80, 37, 0.5);
+  height: 4rem;
+  padding: 1rem;
+  margin-bottom: 2rem; }
