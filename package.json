@@ -1,0 +1,33 @@
+{
+	"name": "JSGames",
+	"version": "1.0.0",
+	"description": "JavaScript game collection",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "node-sass sass/main.scss css/style.css -w",
+
+		"compile:sass": "node-sass sass/main.scss css/style.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
+		"compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:sass prefix:css compress:css",
+
+		"compile:home": "node-sass sass/pages/home.scss css/home.comp.css",
+		"prefix:home": "postcss --use autoprefixer -b \"last 10 versions\" css/home.comp.css -o css/home.prefix.css",
+		"compress:home": "node-sass css/home.prefix.css css/home.css --output-home compressed",
+		"build:home": "npm-run-all compile:home prefix:home compress:home",
+
+		"compile:memory": "node-sass sass/pages/memory.scss css/memory.comp.css",
+		"prefix:memory": "postcss --use autoprefixer -b \"last 10 versions\" css/memory.comp.css -o css/memory.prefix.css",
+		"compress:memory": "node-sass css/memory.prefix.css css/memory.css --output-memory compressed",
+		"build:memory": "npm-run-all compile:memory prefix:memory compress:memory"
+	},
+	"author": "Martin L. Bakke",
+	"license": "MIT",
+	"devDependencies": {
+		"autoprefixer": "^7.1.4",
+		"concat": "^1.0.3",
+		"node-sass": "^4.5.3",
+		"npm-run-all": "^4.1.1",
+		"postcss-cli": "^7.1.1"
+	}
+}
