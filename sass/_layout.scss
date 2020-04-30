@@ -1,0 +1,10 @@
+body {
+	background-color: $color-white;
+}
+
+.header {
+	border-bottom: 2px solid rgba($color-detail, .5);
+	height: 4rem;
+	padding: 1rem;
+	margin-bottom: 2rem;
+}
