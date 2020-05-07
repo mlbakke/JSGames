@@ -13,19 +13,39 @@ html {
 body {
   /* box-sizing will be inherited to the whole site */
   box-sizing: border-box;
-  padding: 3rem; }
+  padding: 3rem;
+  font-family: 'Lato', sans-serif; }
 
-.heading-primary {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #293132;
-  line-height: 1rem; }
+.heading {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #0a0908; }
+  .heading--primary {
+    text-align: center; }
 
 body {
   background-color: #eef0f2; }
 
 .header {
-  border-bottom: 2px solid rgba(241, 80, 37, 0.5);
-  height: 4rem;
-  padding: 1rem;
-  margin-bottom: 2rem; }
+  height: 4rem; }
+
+.games {
+  padding: 2rem 0; }
+  .games__game {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 300;
+    list-style: none;
+    color: #0a0908; }
+    .games__game--img {
+      height: 4rem;
+      transform: translateY(1rem); }
+    .games__game--link:link, .games__game--link:visited, .games__game--link:hover, .games__game--link:active {
+      color: currentColor;
+      text-decoration: none; }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 600px;
+  width: 600px; }
