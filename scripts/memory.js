@@ -181,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			card.setAttribute('src', 'img/memory/blank.jpg');
 			card.setAttribute('data-id', i);
 			card.setAttribute('class', 'card');
+			card.width = "100";
 			card.addEventListener('click', flipCard);
 			grid.appendChild(card);
 		}
