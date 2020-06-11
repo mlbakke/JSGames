@@ -1,24 +1,24 @@
 .games {
-    padding: 2rem 0;
+	padding: 2rem 0;
 
-    &__game {
-        font-size: 3.5rem;
-        line-height: 4rem;
-        font-weight: 300;
-        list-style: none;
-        color: $color-black;
+	&__game {
+		font-size: 4rem;
+		line-height: 5rem;
+		font-weight: 300;
+		list-style: none;
+		color: $color-black;
 
-        &--img{
-            height: 4rem;
-            transform: translateY(1rem);
-        }
+		&--img {
+			height: 4rem;
+			transform: translateY(1rem);
+		}
 
-        &--link:link,
-        &--link:visited,
-        &--link:hover,
-        &--link:active {
-            color: currentColor;
-            text-decoration: none;
-        }
-    }
+		&--link:link,
+		&--link:visited,
+		&--link:hover,
+		&--link:active {
+			color: currentColor;
+			text-decoration: none;
+		}
+	}
 }
