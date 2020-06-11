@@ -1,7 +1,16 @@
 body {
 	background-color: $color-white;
+	padding: 5rem;
 }
 
 .header {
 	height: 4rem;
+}
+
+.footer {
+	width: 90vw;
+	padding: 2rem;
+	position: absolute;
+	bottom: 0;
+	text-align: right;
 }
