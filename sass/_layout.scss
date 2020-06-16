@@ -1,11 +1,11 @@
 body {
 	background-color: $color-white;
 
-	@media only screen and (min-width: 481px) {
+	@media only screen and (min-width: 480px) {
 		padding: 2rem;
 	}
 
-	@media only screen and (min-width: 769px) {
+	@media only screen and (min-width: 760px) {
 		padding: 5rem;
 	}
 }
