@@ -20,5 +20,13 @@
 			color: currentColor;
 			text-decoration: none;
 		}
+
+		&--construction:link,
+		&--construction:visited,
+		&--construction:hover,
+		&--construction:active {
+			text-decoration: line-through;
+			color: rgba($color-black, .75);
+		}
 	}
 }
