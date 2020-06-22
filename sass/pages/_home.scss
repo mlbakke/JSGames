@@ -27,6 +27,7 @@
 		&--construction:active {
 			text-decoration: line-through;
 			color: rgba($color-black, .75);
+			cursor: default;
 		}
 	}
 }
