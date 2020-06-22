@@ -1,14 +1,40 @@
 .moleboard {
-	display: inline-grid;
-	width: 60rem;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	margin-top: 1.5rem;
+	display: grid;
+	width: 70rem;
+	grid-template-columns: repeat(3, 1fr), 5rem;
+	grid-template-rows: 3rem, repeat(2, 1fr);
+}
+
+.score-area {
+	grid-column: 1 / span 3;
+	grid-row: 1 / 2;
+}
+
+.topscores {
+	grid-column: 4 / 5;
+	grid-row: 1 / 4;
+
+	&__heading {
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+	}
+
+	&__list {
+		list-style: none;
+	}
+
+	&__score {
+		font-size: 1.2rem;
+		margin-bottom: .25rem;
+	}
 }
 
 .hole {
 	position: relative;
 	overflow: hidden;
 	height: 20rem;
+	width: 20rem;
 
 	&:after {
 		display: block;
