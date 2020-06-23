@@ -64,17 +64,37 @@ body {
 .moleboard {
   margin-top: 1.5rem;
   display: grid;
-  width: 70rem;
-  grid-template-columns: repeat(3, 1fr), 5rem;
-  grid-template-rows: 3rem, repeat(2, 1fr); }
+  width: 76rem;
+  height: 43rem;
+  grid-column-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr) 10rem;
+  grid-template-rows: 3rem repeat(2, 1fr); }
+  @media (max-width: 56.25em) {
+    .moleboard {
+      margin: 1rem auto;
+      grid-column-gap: 1rem;
+      width: 55rem;
+      height: 38rem; } }
+  @media (max-width: 37.5em) {
+    .moleboard {
+      width: 31rem;
+      height: 36rem;
+      grid-column-gap: .25rem;
+      grid-template-columns: repeat(2, 1fr) 9rem;
+      grid-template-rows: 3rem repeat(3, 1fr); } }
 
 .score-area {
   grid-column: 1 / span 3;
   grid-row: 1 / 2; }
+  @media (max-width: 37.5em) {
+    .score-area {
+      grid-column: 1 / span 2;
+      grid-row: 1 / 2; } }
 
 .topscores {
   grid-column: 4 / 5;
-  grid-row: 1 / 4; }
+  grid-row: 1 / 4;
+  overflow: hidden; }
   .topscores__heading {
     font-size: 1.2rem;
     margin-bottom: 1rem; }
@@ -83,12 +103,14 @@ body {
   .topscores__score {
     font-size: 1.2rem;
     margin-bottom: .25rem; }
+  @media (max-width: 37.5em) {
+    .topscores {
+      grid-column: 3 / 4;
+      grid-row: 1 / 5; } }
 
 .hole {
   position: relative;
-  overflow: hidden;
-  height: 20rem;
-  width: 20rem; }
+  overflow: hidden; }
   .hole:after {
     display: block;
     background: url("../img/mane/dirt.svg") bottom center no-repeat;
@@ -99,6 +121,12 @@ body {
     position: absolute;
     z-index: 2;
     bottom: -4rem; }
+    @media (max-width: 56.25em) {
+      .hole:after {
+        bottom: -3rem; } }
+    @media (max-width: 37.5em) {
+      .hole:after {
+        bottom: -2rem; } }
   .hole.appear .mole {
     top: -.3rem; }
 
