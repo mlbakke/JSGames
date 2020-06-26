@@ -42,6 +42,18 @@ body {
   bottom: 0;
   text-align: right; }
 
+.btn {
+  border: none;
+  outline: none;
+  border-bottom: 1px dotted #0a0908;
+  background-color: transparent;
+  cursor: pointer; }
+  .btn--new-game {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .btn:active {
+    border-bottom: 1px dotted #f15025; }
+
 .games {
   padding: 2rem 0; }
   .games__game {
@@ -170,3 +182,34 @@ body {
   color: black;
   display: none;
   cursor: pointer; }
+
+.tetris-wrapper {
+  width: 42rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 10rem; }
+
+.tetris-level {
+  grid-column: 1 / 2; }
+
+.tetris-lines {
+  grid-column: 2 / 3; }
+
+.tetris-score {
+  grid-column: 3 / 4; }
+
+.tetris-canvas {
+  grid-column: 1 / 4;
+  border: 1px solid #0a0908; }
+
+.tetris-topscores {
+  grid-column: 4 / 5;
+  grid-row: 1/-1;
+  overflow: hidden; }
+  .tetris-topscores__heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem; }
+  .tetris-topscores__list {
+    list-style: none; }
+  .tetris-topscores__score {
+    font-size: 1.2rem;
+    margin-bottom: .25rem; }
