@@ -19,12 +19,17 @@
     </header>
 
     <main>
+        <h2 class="heading heading--secondary">Titi's Tetris</h2>
+        <button class="btn btn--new-game" id="newGame">New game</button>
+            
         <div class="tetris-wrapper">
-            <h2 class="heading heading--secondary">Titi's Tetris</h2>
-            <button class="btn btn--new-game" id="newGame">New game</button>
-            <p class="tetris-level">Level: <span id="tetris-level"></span></p>
-            <p class="tetris-lines">Lines: <span id="tetris-lines"></span></p>
-            <p class="tetris-score">Score: <span id="tetris-score"></span></p>
+            <div class="tetris-topscores">
+                <h3 class="tetris-topscores__heading">Your topscores:</h3>
+                <ul class="tetris-topscores__list"></ul>
+            </div>
+            <p class="tetris-level">Level: <span id="tetris-level">0</span></p>
+            <p class="tetris-lines">Lines: <span id="tetris-lines">0</span></p>
+            <p class="tetris-score">Score: <span id="tetris-score">0</span></p>
             <canvas id="tetris-canvas" class="tetris-canvas"></canvas>
         </div>
     </main>
