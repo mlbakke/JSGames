@@ -1,1 +1,38 @@
+.tetris-wrapper {
+	width: 42rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 10rem;
+}
 
+.tetris-level {
+	grid-column: 1 / 2;
+}
+.tetris-lines {
+	grid-column: 2 / 3;
+}
+.tetris-score {
+	grid-column: 3 / 4;
+}
+
+.tetris-canvas {
+	grid-column: 1 / 4;
+	border: 1px solid $color-black;
+}
+
+.tetris-topscores {
+	grid-column: 4 / 5;
+	grid-row: 1/-1;
+	overflow: hidden;
+
+	&__heading {
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+	}
+	&__list {
+		list-style: none;
+	}
+	&__score {
+		font-size: 1.2rem;
+		margin-bottom: .25rem;
+	}
+}
