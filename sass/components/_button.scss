@@ -1,0 +1,15 @@
+.btn {
+	border: none;
+	outline: none;
+	border-bottom: 1px dotted $color-black;
+	background-color: transparent;
+	cursor: pointer;
+
+	&--new-game {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	&:active {
+		border-bottom: 1px dotted $color-detail;
+	}
+}
